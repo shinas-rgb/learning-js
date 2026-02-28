@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <input type="checkbox" id="subscribeBtn" name="" value="">
+    <label for="">Subscribed</label><br><br>
+    <input type="radio" id="visaOpt" name="card" value="">
+    <label  for="">Visa</label>
+    <input type="radio" id="masterOpt" name="card" value="">
+    <label for="">MasterCard</label>
+    <input type="radio" id="paypalOpt" name="card" value="">
+    <label for="">Paypal</label><br><br>
+    <button id="submitBtn" type="submit">Submit</button>
+    <p id="subscribePar"></p>
+    <p id="paymentPar"></p>
+
+    <script>
+      const subscribeBtn = document.getElementById("subscribeBtn");
+      const visaOpt = document.getElementById("visaOpt");
+      const masterOpt = document.getElementById("masterOpt");
+      const paypalOpt = document.getElementById("paypalOpt");
+      const subscribePar = document.getElementById("subscribePar");
+      const paymentPar = document.getElementById("paymentPar");
+      const submitBtn = document.getElementById("submitBtn");
+
+      submitBtn.onclick = function(){
+        if(subscribeBtn.checked){
+          subscribePar.textContent = `You subscribed!`;
+        }else{
+          subscribePar.textContent = `You are NOT subscribed!`;
+        }
+
+        if(visaOpt.checked){
+          paymentPar.textContent = `You selected Visa`;
+        }else if(masterOpt.checked){
+          paymentPar.textContent = `You selected MasterCard`;
+        }else if(paypalOpt.checked){
+          paymentPar.textContent = `You selected Paypal`;
+        }else{
+          paymentPar.textContent = `You must select a payment option`;
+        }
+      }
+    </script>
+  </body>
+</html>
