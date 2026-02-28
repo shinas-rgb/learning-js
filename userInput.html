@@ -1,0 +1,26 @@
+<<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1 id="title-name">Welcome</h1>
+
+    <label for="username">username: </label>
+    <input type="text" name="" value="" id="myText">
+    <button type="" id="mySubmit">submit</button>
+
+    <script>
+      //let username = window.prompt("Enter your name");
+
+      document.getElementById("mySubmit").onclick = function(){
+        username = document.getElementById("myText").value;
+        document.getElementById("title-name").textContent = `Hello ${username}`;
+        console.log(username)
+      }
+    </script>
+  </body>
+</html>

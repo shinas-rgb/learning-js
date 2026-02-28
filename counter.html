@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <label id="digit">0</label><br>
+    <div id="buttons">
+      <button id="increaseBtn" class="btnClass" type="">Increase</button>
+      <button id="resetBtn" class="btnClass" " type="">Reset</button>
+      <button id="decreaseBtn" class="btnClass" type="">Decrease</button>
+    </div>
+    <style>
+      #digit {
+      display: block;
+      font-size: 10em;
+      text-align: center;
+    }
+    #buttons {
+    text-align: center;
+    }
+    .btnClass {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    background-color: #F87C63;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.25s;
+    }
+    .btnClass:hover {
+    background-color: #F4320B;
+    }
+    </style>
+    
+    <script>
+      const increaseBtn = document.getElementById("increaseBtn");
+      const resetBtn = document.getElementById("resetBtn");
+      const decreaseBtn = document.getElementById("decreaseBtn");
+      const digit = document.getElementById("digit");
+      let count = 0;
+      
+      increaseBtn.onclick = function(){
+        count++;
+        digit.textContent = count;
+      }
+      decreaseBtn.onclick = function(){
+        count--;
+        digit.textContent = count;
+      }
+      resetBtn.onclick = function(){
+        count = 0;
+        digit.textContent = count;
+      }
+
+
+
+    </script>
+  </body>
+</html>
