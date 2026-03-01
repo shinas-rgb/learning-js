@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+  
+    <script>
+      const numbers = [1, 2, 3, 4, 5];
+
+      const squres = numbers.map((element) => Math.pow(element, 2));
+      console.log(squres);
+
+      const even = numbers.filter((element) => element % 2 === 0);
+      console.log(even);
+
+      const biggest = numbers.reduce((accumulator, element) => Math.max(accumulator, element));
+      console.log(biggest);
+    </script>
+  </body>
+</html>

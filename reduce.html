@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+  
+    <script>
+      const grades = [50, 75, 35, 80, 69];
+      const big = grades.reduce(findBig);
+
+      function findBig(accumulator, element){
+        return Math.max(accumulator, element);
+      }
+      console.log(big);
+    </script>
+  </body>
+</html>
