@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+  
+    <script>
+    function gameScore(){
+      let score = 0;
+      
+      function increaseScore(points){
+        score += points;
+        console.log(`+${points}pts`);
+      }
+
+      function decreaseScore(points){
+        score -= points;
+        console.log(`-${points}pts`);
+      }
+
+      function getScore(){
+        return score;
+      }
+
+      return {increaseScore, decreaseScore, getScore};
+    }
+
+    game = gameScore();
+
+    game.increaseScore(5);
+    game.decreaseScore(3);
+    game.increaseScore(8);
+    console.log(`Current score: ${game.getScore()}`);
+    </script>
+  </body>
+</html>

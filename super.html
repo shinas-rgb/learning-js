@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+  <script>
+    class Animal{
+      constructor(name, age){
+        this.name = name;
+        this.age = age;
+      }
+      move(speed){
+        console.log(`This ${this.name} can move at ${speed} km/h`);
+      }
+    }
+    class Rabbit extends Animal{
+      constructor(name, age, runSpeed){
+        super(name, age);
+        this.runSpeed = runSpeed;
+      }
+      run(){
+        console.log(`This ${this.name} can run`);
+        super.move(this.runSpeed);
+      }
+    }
+    class Fish extends Animal{
+      constructor(name, age, swimSpeed){
+        super(name, age);
+        this.swimSpeed = swimSpeed;
+        super.move(this.swimSpeed);
+      }
+      swim(){
+        console.log(`This ${this.name} can swim`);
+      }
+    }
+
+    const rabbit = new Rabbit("Rab", 2, 25);
+    rabbit.run();
+  </script>
+  </body>
+</html>
