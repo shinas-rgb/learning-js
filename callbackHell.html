@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+  
+    <script>
+    function task1(callback) {
+      new promise
+      setTimeout(() => {
+      console.log("taks 1 is complete");
+      callback();
+      }, 1300);
+    };
+
+    function task2(callback) {
+    setTimeout(() => {
+      console.log("taks 2 is complete");
+      callback();
+    }, 800);
+    }
+
+    function task3(callback) {
+    setTimeout(() => {
+      console.logj("taks 3 is complete");
+      callback();
+    }, 1500);
+    }
+
+    function task4(callback) {
+    setTimeout(() => {
+      console.log("taks 4 is complete");
+        callback();
+    }, 700);
+    }
+
+    // Callback Hell
+    task1(() => {
+      task2(() => {
+        task3(() => {
+            task4(() => {
+            console.log("All tasks complete");
+          });
+        });
+      });
+    });
+
+    
+    </script>
+  </body>
+</html>
